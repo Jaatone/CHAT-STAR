@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-import sys
-
-if not SUPPORT_BOT_TOKEN:
-    print("SUPPORT_BOT_TOKEN not set")
-    sys.exit(1)
-
-if not SUPPORT_GROUP_ID:
-    print("SUPPORT_GROUP_ID not set")
-    sys.exit(1)
-
-if not MONGODB_URL:
-    print("MONGODB_URL not set")
-    sys.exit(1)
 """
 Support Bot - Customer Support with Forum Topics + Auto-Reply
 Handles customer support messages and forwards them to support team
@@ -759,4 +746,5 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
