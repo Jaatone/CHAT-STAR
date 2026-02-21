@@ -27,10 +27,9 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ==================== CONFIGURATION ====================
-SUPPORT_BOT_TOKEN = os.getenv("SUPPORT_BOT_TOKEN", "8522887109:AAFb-Nr2VWVHOesPzEtlu5idHO4_9bAOCkM")
-SUPPORT_GROUP_ID = int(os.getenv("SUPPORT_GROUP_ID", "-1003803623115"))
-MONGODB_URL = os.getenv("MONGODB_URL", "mongodb+srv://vishalkumar_db_user:syXqwR26k30mw1vr@hacker001.lrt4di2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-
+SUPPORT_BOT_TOKEN = os.getenv("SUPPORT_BOT_TOKEN")
+SUPPORT_GROUP_ID = int(os.getenv("SUPPORT_GROUP_ID"))
+MONGODB_URL = os.getenv("MONGODB_URL")
 # Auto-reply configuration
 AUTO_REPLY_ENABLED = True
 AUTO_REPLY_MESSAGE = "✅ Message received! Our team will reply in a few hours. Thank you! 🙏"
@@ -745,4 +744,5 @@ def main():
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
+
     main()
