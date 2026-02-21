@@ -744,10 +744,22 @@ def main():
     
     # Start the bot
     app.run_polling(allowed_updates=Update.ALL_TYPES)
+# ==================== HEALTH CHECK SERVER ====================
 
+health_app = Flask(__name__)
+
+@health_app.route("/")
+def health():
+    return "OK", 200
+
+def run_health_server():
+    health_app.run(host="0.0.0.0", port=8000)
+
+Thread(target=run_health_server).start()
 if __name__ == '__main__':
 
     main()
+
 
 
 
