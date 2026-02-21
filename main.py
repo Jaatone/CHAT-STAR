@@ -570,16 +570,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     welcome_message = (
         "👋 <b>Welcome to Support Bot!</b>\n\n"
-        "Send me any message and our support team will respond soon.\n\n"
-        "You can send:\n"
-        "📝 Text messages\n"
-        "📷 Photos\n"
-        "🎥 Videos\n"
-        "📄 Files/Documents\n"
-        "🎵 Audio & Voice messages\n"
-        "😊 Stickers\n\n"
-        "⚡ <b>Quick Response:</b> You'll receive an instant confirmation when we get your message!\n\n"
-        "Our team will reply as soon as possible!"
+        "Please write your complete message and send it.
+As soon as our admin reviews your message, you will receive a reply"
     )
     
     await update.message.reply_text(welcome_message, parse_mode='HTML')
@@ -759,6 +751,7 @@ Thread(target=run_health_server).start()
 if __name__ == '__main__':
 
     main()
+
 
 
 
