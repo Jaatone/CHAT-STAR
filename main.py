@@ -128,23 +128,24 @@ class DatabaseManager:
             return None
     
     def get_all_users(self):
-    def is_user_blocked(self, user_id):
-    user = self.users.find_one({"user_id": user_id})
-    if user and user.get("blocked", False):
-        return True
-    return False
-
-def set_user_block(self, user_id, status):
-    self.users.update_one(
-        {"user_id": user_id},
-        {"$set": {"blocked": status}}
-    )
         """Get all users from database"""
         try:
             return list(self.users.find({}, {"_id": 0}))
         except Exception as e:
             logger.error(f"Error getting all users: {e}")
             return []
+
+    def is_user_blocked(self, user_id):
+        user = self.users.find_one({"user_id": user_id})
+        if user and user.get("blocked", False):
+            return True
+        return False
+
+    def set_user_block(self, user_id, status):
+        self.users.update_one(
+            {"user_id": user_id},
+            {"$set": {"blocked": status}}
+        )
     
     def get_total_stats(self):
         """Get overall bot statistics"""
