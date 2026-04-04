@@ -616,17 +616,13 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     welcome_message = (
     f"👋 <b>Hello {user_name}!</b>\n\n"
-    "📩 Send your message and our team will respond shortly.\n\n"
-    "⚠️ Please do not block the bot, otherwise you may miss our reply.\n\n"
-    "🎯 Interested in our batch?\n"
-    "💳 Payment Method: <b>Only Amazon e-Voucher</b>\n"
-    "🚫 No other payment methods are accepted.\n\n"
-    "✅ After successful payment, you will receive your batch.\n\n"
-    "🔗 Payment system 👇:\n"
-    "https://t.me/+fiXO77NLXyc5MzIx\n\n"
-    "📢 All details are already shared publicly in the channel.\n"
-    "❌ No replies will be given for already shared information.\n\n"
-    "🙏 Thank you for your support!"
+    "📩 Send your message and our team will respond as soon as possible.\n\n"
+    "⚠️ Important:\n"
+    "• Please do not send 'Hi' or 'Hello' messages.\n"
+    "• Directly send your query or issue.\n"
+    "• Write your batch name correctly.\n"
+    "• Do not block the bot, otherwise you will not receive our reply.\n\n"
+    "🙏 Thank you."
 )
     
     await update.message.reply_text(welcome_message, parse_mode='HTML')
