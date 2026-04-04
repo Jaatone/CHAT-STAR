@@ -32,7 +32,13 @@ SUPPORT_GROUP_ID = int(os.getenv("SUPPORT_GROUP_ID", "-1003803623115")) # Defaul
 MONGODB_URL = os.getenv("MONGODB_URL")
 # Auto-reply configuration
 AUTO_REPLY_ENABLED = True
-AUTO_REPLY_MESSAGE = "✅ Message received! Our team will reply in a few hours. Thank you! 🙏"
+AUTO_REPLY_MESSAGE = (
+    "🚀 Hello! Welcome 👋\n\n"
+    "✅ Your message is in queue.\n"
+    "⏳ Our support team will reply soon.\n\n"
+    "🕔 Admin Active Time: After 5 PM\n"
+    "🙏 Thanks for your patience ❤️"
+)
 
 # ==================== MONGODB SETUP ====================
 
@@ -609,11 +615,19 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_name = update.effective_user.first_name
     
     welcome_message = (
-        f"👋 <b>Hello {user_name}!</b>\n\n"
-        "📩 Send your message and our team will respond as soon as possible.\n\n"
-        "⚠️ Important: Please do not block the bot, otherwise you will not receive our reply.\n\n"
-        "🙏 Thank you."
-    )
+    f"👋 <b>Hello {user_name}!</b>\n\n"
+    "📩 Send your message and our team will respond shortly.\n\n"
+    "⚠️ Please do not block the bot, otherwise you may miss our reply.\n\n"
+    "🎯 Interested in our batch?\n"
+    "💳 Payment Method: <b>Only Amazon e-Voucher</b>\n"
+    "🚫 No other payment methods are accepted.\n\n"
+    "✅ After successful payment, you will receive your batch.\n\n"
+    "🔗 Payment system 👇:\n"
+    "https://t.me/+fiXO77NLXyc5MzIx\n\n"
+    "📢 All details are already shared publicly in the channel.\n"
+    "❌ No replies will be given for already shared information.\n\n"
+    "🙏 Thank you for your support!"
+)
     
     await update.message.reply_text(welcome_message, parse_mode='HTML')
 
