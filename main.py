@@ -36,7 +36,7 @@ AUTO_REPLY_MESSAGE = (
     "🚀 Hello! Welcome 👋\n\n"
     "✅ Your message is in queue.\n"
     "⏳ Our support team will reply soon.\n\n"
-    "🕔 Admin Active Time: After 5 PM\n"
+    "🕔 Admin Active Time: After 4 PM\n"
     "🙏 Thanks for your patience ❤️"
 )
 
