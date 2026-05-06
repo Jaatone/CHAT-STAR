@@ -33,12 +33,14 @@ MONGODB_URL = os.getenv("MONGODB_URL")
 # Auto-reply configuration
 AUTO_REPLY_ENABLED = True
 AUTO_REPLY_MESSAGE = (
-    "🚀 Hello! Dear 👋\n\n"
-    "✅ Your message is in queue.\n"
-    "⏳ Our support team will reply soon.\n\n"
-    "🕔 The admin is online everyday between 4:00 pm and 4:30 pm.\n"
-    "🙏 Thanks for your patience ❤️"
+    "✅ आपका मैसेज मिल गया है। / Message Received.\n\n"
+    "👨‍💻 एडमिन के ऑनलाइन आने पर आपको जवाब दिया जाएगा।\n"
+    "Admin will respond once they are online.\n\n"
+    "🚫 कृपया बॉट को ब्लॉक न करें, आपको जवाब मिल जाएगा।\n"
+    "Please do not block the bot, you will receive a reply.\n\n"
+    "🙏 Thanks for your patience! ❤️"
 )
+
 
 # ==================== MONGODB SETUP ====================
 
